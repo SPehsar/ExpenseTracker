@@ -5,4 +5,3 @@ export const TransactionList = () => {
     <div>TransactionList</div>
   )
 }
-
