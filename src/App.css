@@ -144,7 +144,7 @@ input[type='number'] {
 >>>>>>> a309653d52e70ecacdc5922f46853a21bafb331d
 }
 
-.delete-btn {
+.delete {
   cursor: pointer;
   background-color: red;
   border: 0;
