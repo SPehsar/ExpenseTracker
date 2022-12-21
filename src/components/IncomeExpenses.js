@@ -1,5 +1,5 @@
 import { getMouseEventOptions } from '@testing-library/user-event/dist/utils';
-import React, {useContext} from 'react'
+
 import { GlobalContext } from "../context/GlobalState";
  
 function trans(){
@@ -32,18 +32,14 @@ export const IncomeExpenses = () => {
 
   return (
     
-    <div className="inc-exp-containers">
+    <div className="inc-exp-container">
         <div>
             <h4>Income</h4>
-<<<<<<< HEAD
             <p  className="money plus">{income}</p>
-=======
-            <p  className="money pius">-$0.0</p>
->>>>>>> a309653d52e70ecacdc5922f46853a21bafb331d
         </div>
         <div>
             <h4>Expense</h4>
-            <p i class="money minus">{expense}</p>
+            <p i className="money minus">{expense}</p>
         </div>
     </div>
   )
