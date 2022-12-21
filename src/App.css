@@ -47,11 +47,6 @@ h4 {
   margin: 20px 0;
 }
 
-.inc-exp-container > div {
-  flex: 1;
-  text-align: center;
-}
-
 .inc-exp-container > div:first-of-type {
   border-right: 1px solid #dedede;
 }
@@ -63,11 +58,19 @@ h4 {
 }
 
 .money.plus {
+<<<<<<< HEAD
   color: #50D050;
 }
 
 .money.minus {
   color:   tomato;
+=======
+  color: #2dd472;
+}
+
+.money.minus {
+  color: tomato;
+>>>>>>> a309653d52e70ecacdc5922f46853a21bafb331d
 }
 
 label {
@@ -87,7 +90,11 @@ input[type='number'] {
 
 .btn {
   cursor: pointer;
+<<<<<<< HEAD
   background-color: rgb(51, 127, 175);
+=======
+  background-color: #b79b79;
+>>>>>>> a309653d52e70ecacdc5922f46853a21bafb331d
   box-shadow: var(--box-shadow);
   color: #fff;
   border: 0;
@@ -99,7 +106,7 @@ input[type='number'] {
 }
 
 .btn:focus,
-.delete-btn:focus {
+.delete-btns:focus {
   outline: 0;
 }
 
@@ -121,13 +128,20 @@ input[type='number'] {
 }
 
 .list li.plus {
+<<<<<<< HEAD
   border-right: 5px solid #50D050;
   border-left: 5px solid #50D050;
+=======
+  border-right: 5px solid #39b96f;
+>>>>>>> a309653d52e70ecacdc5922f46853a21bafb331d
 }
 
 .list li.minus {
   border-right: 5px solid red;
+<<<<<<< HEAD
   border-left: 5px solid red;
+=======
+>>>>>>> a309653d52e70ecacdc5922f46853a21bafb331d
 }
 
 .delete-btn {
