@@ -1,9 +1,8 @@
 const express = require("express")
 const cors = require("cors")
-const morgan = require("morgan")
 const dotenv = require("dotenv")
-const colors = require("colors")
 const connectDB = require("./config/connectDB")
+
 // config dot env
 dotenv.config()
 
@@ -14,7 +13,6 @@ connectDB()
 const app=express()
 
 // middleware
-app.use(morgan("dev"))
 app.use(express.json())
 app.use(cors())
 
@@ -28,5 +26,5 @@ const PORT = 8080 || process.env.PORT
 
 // listen server
 app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`.bgWhite.blue)
+    console.log(`Server running on port ${PORT}`)
 })
