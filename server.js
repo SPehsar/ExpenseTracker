@@ -3,7 +3,7 @@ const cors = require("cors")
 const morgan = require("morgan")
 const dotenv = require("dotenv")
 
-const PORT = 8080 
+const PORT = 8080 || process.env.PORT;
 const databaseConnection = require("./config/databaseConnection")
 
 dotenv.config()
