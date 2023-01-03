@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #FFFFFF;
+  --tan-1: #FBF9F6;
+  --tan-2: #E7E2DD;
+  --tan-3: #E2D9D1;
+  --tan-4: #D3C1AE;
+  --orange: #f67f00bc;
+  --text-light: #968c84;
+  --text-dark: #615954;
+}
+
+body {
+  margin: 0;
+  font-family:'Helvetica Neue', sans-serif, Arial;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+table, Table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 90%;
+  box-shadow: 10px 10px 25px grey;
+  padding: 10px;
+  text-align: center;
+  text-align: center;
+  border: 3px solid rgb(9, 243, 185);
+}
+
+
+td, th{
+  border: 1px solid #dddddd;
+  padding: 8px;
+  text-align: center; 
+  vertical-align: middle;
+  font-size: 20px;
+}
+
+th{
+  font-size: 22px;
+  font-weight:bolder;
+}
+
+.content {
+  height: 100vh;
+  padding: 8px;
+  text-align: center;
+}
+
+.resgister-page {
+  display: flex; 
+  align-items: center;
+  justify-content: center; 
+  height: 90vh;
+  background-color: rgb(235, 235, 240);
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+.headerFont{
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+}
+
+.anticon svg {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.balanceResult {
+  font-size:larger ;
+  text-emphasis:var(--text-light);
+}
+
+.dropbtn {
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.hItemOne {
+  float: right;
+  padding-top: 20px;
+  padding-right: 20px;
+}
+.hItemTwo {
+  float: left;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+.dropdown {
+  position: relative; 
+  display: inline-block;
+
+}
+.hContainer {
+  display: inline-block; 
+  width: 100%;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  padding: 12px 16px;
+  background-color: #F8F9FA;
+  min-width: 160px;
+  text-decoration: none;
+  z-index: 1;
+}
+
+.dropdown-content a:hover {background-color: --tan-4;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: --tan-4}
+
+.push {
+    margin-left: auto;
+}
+
+.btn:hover {
+  background-color: --tan-4;
+  border-color:rgb(54, 41, 22) ;
+  color:black;
+  opacity: 1;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: --tan-4;
+  color: --white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: --white;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  /* width: 40%; Could be more or less, depending on screen size */
+  max-width:500px;
+  margin:auto;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+}
+
+label, label { 
+  font-size:36px;
+}
+ .ant-form-item-label>label {
+  font-size: 16px;
+}
+
+.input-container {
+  display: flex;
+  /* width: 100%; */
+  margin-bottom: 15px;
+}
+
+.icon {
+  padding: 10px;
+  background: --orange;
+  color: --white;
+  min-width: 50px;
+  text-align: center;
+}
+
+.input-field {
+  min-height: 2.2vw;
+  padding: 10px;
+  outline: none;
+  font-size: 200pt;
+}
+
+.input-field:focus {
+  border: 2px solid --orange;
+}
+
+/* Set a style for the submit button */
+.btn {
+  background-color: --orange;
+  color: --white;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+.btn:hover {
+  background-color: pink;
+  padding: 15px 20px;
+  border:rgb(136, 104, 57);
+  cursor: pointer;
+  width: 102%;
+  opacity: 0.8;
+}
+
+
+h9{
+  font-size: 16px; 
+  color: rgb(184, 127, 21);
+  padding: 15px 20px;
+  cursor: pointer;
+}
+
+h9:hover {
+  font-size: 16px; 
+  color: tomato;
+  padding: 15px 20px;
+  cursor: pointer;
+}
+
+.ant-table {
+  font-size: 20px;
+}
+
+/* row data */
+.ant-table-tbody > tr > td {
+  height: 5px;
+  padding: 4px;
+}
+.ant-table-thead > tr > th {
+  height: 5px;
+  padding: 4px;
+}
+
+.pivoteTable2 {
+  width: 100%;
+  border: none;
+  border: 0px;
+  box-shadow: none;
+  text-align: right;
+  border-collapse:collapse;
+  background: transparent;
+  outline: 0;
+ 
+}
+
+.alnright { 
+  text-align: right; 
+  background: transparent;
+  background-color:white;
+  border: none;
+}
+
+.headLine{
+  color:white;
+  text-align: center;
+ 
+}
