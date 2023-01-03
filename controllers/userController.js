@@ -1,6 +1,6 @@
 const userModel = require("../models/userModel");
 
-
+// login callback -------------------------------------------------------
 const loginController = async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -8,7 +8,10 @@ const loginController = async (req, res) => {
     if (!user) {
       return res.status(404).send("User Not Found");
     }
-    res.status(200).json({ success: true, user });
+    res.status(200).json({
+      success: true,
+      user,
+    });
   } catch (error) {
     res.status(400).json({
       success: false,
@@ -16,13 +19,18 @@ const loginController = async (req, res) => {
     });
   }
 };
+// -----------------------------------------------------------------------
 
 
+// Register Callback -----------------------------------------------------
 const registerController = async (req, res) => {
   try {
-    const newUser = new userModel(req, body);
+    const newUser = new userModel(req.body);
     await newUser.save();
-    res.status(201).json({ success: true, newUser, });
+    res.status(201).json({
+      success: true,
+      newUser,
+    });
   } catch (error) {
     res.status(400).json({
       success: false,
@@ -30,5 +38,7 @@ const registerController = async (req, res) => {
     });
   }
 };
+// ------------------------------------------------------------------------
+
 
 module.exports = { loginController, registerController };
