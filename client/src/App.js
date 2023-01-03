@@ -3,6 +3,14 @@ import HomePage from "./pages/HomePage";
 import Register from "./pages/Register";
 import { Routes, Route, Navigate } from "react-router-dom";
 
+export function verifyUserExist(props) {
+  if (localStorage.getItem("user")) {
+    return props.children;
+  } else {
+    return <Navigate to="/login" />;
+  }
+}
+
 function App() {
   return (
     <>
@@ -10,9 +18,9 @@ function App() {
         <Route
           path="/"
           element={
-            <ProtectedRoutes>
+            <verifyUserExist>
               <HomePage />
-            </ProtectedRoutes>
+            </verifyUserExist>
           }
         />
         <Route path="/register" element={<Register />} />
@@ -20,14 +28,6 @@ function App() {
       </Routes>
     </>
   );
-}
-
-export function ProtectedRoutes(props) {
-  if (localStorage.getItem("user")) {
-    return props.children;
-  } else {
-    return <Navigate to="/login" />;
-  }
 }
 
 export default App;

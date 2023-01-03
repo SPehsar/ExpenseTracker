@@ -19,7 +19,7 @@ const Register = () => {
 // Handeling registeration form --------------------------------------------
   const submitHandler = async (values) => {
     try {
-      await axios.post("/users/register", values);
+      await axios.post("/api/v1/users/register", values);
       message.success("Registeration Successfull");
       navigate("/login");
     } catch (error) {

@@ -14,10 +14,7 @@ import {
   Table,
   DatePicker,
   Space,
-  Button,
   Divider,
-  Row,
-  Col,
 } from "antd";
 
 const { TextArea } = Input;
@@ -55,11 +52,6 @@ const HomePage = () => {
 
   // Get Data based on filters and perform calculations --------------------------------------
   // this section gets income and expences and calulate mathematical actions (add and deduct)
-
-  const totalBalance = allTransaction.reduce(
-    (acc, transaction) => acc + transaction.amount,
-    0
-  );
 
   const totalIncomeBalance = allTransaction
     .filter((transaction) => transaction.type === "income")
@@ -137,7 +129,7 @@ const HomePage = () => {
     const getAllTransactions = async () => {
       try {
         const user = JSON.parse(localStorage.getItem("user"));
-        const res = await axios.post("/transactions/get-transaction", {
+        const res = await axios.post("/api/v1/transactions/get-transaction", {
           userid: user._id,
           frequency,
           selectedDate,
@@ -157,7 +149,7 @@ const HomePage = () => {
   // delete handler codes---------------------------------------------------------------------
   const handleDelete = async (record) => {
     try {
-      await axios.post("/transactions/delete-transaction", {
+      await axios.post("/api/v1/transactions/delete-transaction", {
         transactionId: record._id,
       });
       message.success("Transaction Deleted!");
@@ -175,13 +167,13 @@ const HomePage = () => {
       window.location.reload();
       const user = JSON.parse(localStorage.getItem("user"));
       if (editable) {
-        await axios.post("/transactions/edit-transaction", {
+        await axios.post("/api/v1/transactions/edit-transaction", {
           payload: { ...values, userId: user._id },
           transactionId: editable._id,
         });
         message.success("Transaction Updated Successfully");
       } else {
-        await axios.post("/transactions/add-transaction", {
+        await axios.post("/api/v1/transactions/add-transaction", {
           ...values,
           userid: user._id,
         });

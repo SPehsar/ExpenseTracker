@@ -28,6 +28,10 @@ app.use("/api/v1/users", require("./routes/userRoute"));
 app.use("/api/v1/transactions", require("./routes/transactionRoutes"));
 // ----------------------------------------------------
 
+app.get("/*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client/build", "index.html"))
+})
+
 // ----------------------------------------------- port
 const PORT = 8080 || process.env.PORT;
 
