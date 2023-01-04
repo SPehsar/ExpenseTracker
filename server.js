@@ -27,6 +27,11 @@ app.use("/api/v1/users", require("./routes/userRoute"));
 app.use("/api/v1/transactions", require("./routes/transactionRoutes"));
 // ----------------------------------------------------
 
+
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('client/build'));
+}
+
 // ---------------------------------------------- build 
 app.get("/*", (req, res) => {
   res.sendFile(path.join(__dirname, "client/build", "index.html"))
