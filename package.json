@@ -8,7 +8,7 @@
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\" ",
-    "prod-build": "cd client && npm i && npm run build",
+    "prod-build": "npm install  && cd client && npm install && npm run build",
     "prod-start": "node server.js"
   },
   "keywords": [],
