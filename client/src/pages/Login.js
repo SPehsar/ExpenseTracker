@@ -21,7 +21,7 @@ const Login = () => {
       );
       navigate("/");
     } catch (error) {
-      message.info("Pease compete all the fields!!!");
+      message.info("Pease compete all the fields correctly!!!");
     }
   };
   // -------------------------------------------------------------------------
@@ -65,7 +65,7 @@ const Login = () => {
                 <Input
                   className="input-field"
                   type="email"
-                  placeholder="Email Address"
+                  placeholder="Enter Your Email Address"
                   suffix={
                     <RedEnvelopeOutlined
                       style={{
@@ -86,7 +86,7 @@ const Login = () => {
                 <Input
                   className="input-field"
                   type="password"
-                  placeholder="Password"
+                  placeholder="Enter Your Password"
                   suffix={
                     <KeyOutlined
                       style={{

@@ -204,6 +204,8 @@ const HomePage = () => {
           </button>
         </div>
 
+        <Divider type="vertical" />
+
         <div>
           <h6>Select Report Type (Balance, Income, Expense)</h6>
           <Select
@@ -223,9 +225,11 @@ const HomePage = () => {
           )}
         </div>
 
+        <Divider type="vertical" />
+
         <div>
           <h6>Select Period</h6>
-          <Select value={frequency} onChange={(values) => setFrequency(values)}>
+          <Select style={{ padding: "0 8px 4px" }} value={frequency} onChange={(values) => setFrequency(values)}>
             <Select.Option value="7">LAST 1 Week</Select.Option>
             <Select.Option value="30">LAST 1 Month</Select.Option>
             <Select.Option value="365">LAST 1 year</Select.Option>
@@ -238,6 +242,8 @@ const HomePage = () => {
             />
           )}
         </div>
+
+        <Divider type="vertical" />
 
         <div>
           {" "}
