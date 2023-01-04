@@ -42,7 +42,7 @@ const Register = () => {
       marginTop:'-70px', fontSize:'50px', backgroundSize: 'cover', }}   className="loginAndRegister">
         
         <Form layout="vertical" className="modal-content animate" onFinish={submitHandler}>
-          <h1>Register Form</h1>
+          <h1><br /><br />Register Form</h1>
           
           <Form.Item style={{fontSize:"16px"}}  label="Name" name="name">
             <Input placeholder="Your Name" suffix={<UserOutlined  style={{background: "#E5E4E2", fontSize:"16px", textAlign: "left"}}/>}/>

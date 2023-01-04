@@ -1,8 +1,12 @@
  
+
+
 Prologue
 The PDF version of this file located at:
  https://github.com/SPehsar/ExpenseTracker/blob/master/README.pdf
 You can access the application using the following link:
+https://expense-tracker-qa5s.onrender.com
+
 
 Contents
 Prologue	1
@@ -11,25 +15,29 @@ How It Works	3
 Authentication	3
 When you are in the app	3
 Communication Diagram	4
-The Code	5
-The technology is being used	5
-Front End	6
-Back End	7
-How I Created the Structure	8
-Back end:	8
-Front end:	8
-Final Note	9
-Need to Know	9
-Moment.js	9
-Ant Design	9
-Features	9
-Redux	9
-Axios	10
-Axios vs. Fetch	10
-CORS	10
-Concurrently	10
-Morgan	10
-Happy coding!	11
+Wireframes	6
+Login page	6
+Registration page	6
+Home Page	7
+The Code	7
+The technology is being used	7
+Front End	8
+Back End	9
+How I Created the Structure	10
+Back end:	10
+Front end:	10
+Final Note	11
+Need to Know	11
+Moment.js	11
+Ant Design	11
+Features	11
+Redux	11
+Axios	12
+Axios vs. Fetch	12
+CORS	12
+Concurrently	12
+Morgan	12
+Happy coding!	13
 
 
  
@@ -83,7 +91,16 @@ An analytical report appears on the right side of the screen, above the table, t
 Communication Diagram
 
  
+Wireframes
+Login page
 
+ 
+
+Registration page
+ 
+
+Home Page
+ 
 The Code
 The following is the general structure of this expense tracking app. There are two parts involved (also including database):
 
@@ -142,6 +159,8 @@ Create all the needed folders and files and make sure you have .gitignore file.
 Include .env and /node_modules in .gitignore file to prevent password uploaded to github.
 
 You may go ahead and clean up some folders and files in front end part.  They are created by default and if you don’t use them remove them
+
+
 
 Final Note
 The code was created based on the knowledge acquired during cohort class, special the full stack MERN app that we worked on.  In addition, shout-out to al youtubers and other coders that provide very detailed educational instructions.  You all rock with no exception. Besides that, If you like the code, please give me a star.
