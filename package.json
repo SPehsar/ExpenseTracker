@@ -9,7 +9,7 @@
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\" ",
     "prod-build": "cd client && npm i && npm run build",
-    "prod-bstart": "node server.js"
+    "prod-start": "node server.js"
   },
   "keywords": [],
   "author": "Cyla",
