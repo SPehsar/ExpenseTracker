@@ -1,6 +1,4 @@
  
-
-
 Prologue
 The PDF version of this file located at:
  https://github.com/SPehsar/ExpenseTracker/blob/master/README.pdf
@@ -9,35 +7,34 @@ https://expense-tracker-qa5s.onrender.com
 
 
 Contents
-Prologue	1
-Summary	3
-How It Works	3
-Authentication	3
-When you are in the app	3
-Communication Diagram	4
-Wireframes	6
-Login page	6
-Registration page	6
-Home Page	7
-The Code	7
-The technology is being used	7
-Front End	8
-Back End	9
-How I Created the Structure	10
-Back end:	10
-Front end:	10
-Final Note	11
-Need to Know	11
-Moment.js	11
-Ant Design	11
-Features	11
-Redux	11
-Axios	12
-Axios vs. Fetch	12
-CORS	12
-Concurrently	12
-Morgan	12
-Happy coding!	13
+Prologue	
+Summary	
+How It Works	
+Authentication	
+When you are in the app	
+Communication Diagram	
+Wireframes	
+Login page	
+Registration page	
+Home Page	
+The Code	
+The technology is being used	
+Front End	
+Back End	
+How I Created the Structure	
+Back end:	
+Front end:	
+Final Note	
+Need to Know	
+Moment.js	
+Features	
+Redux	
+Axios	
+Axios vs. Fetch	
+CORS	
+Concurrently	
+Morgan	
+Happy coding!	
 
 
  
@@ -57,8 +54,8 @@ The first thing you want is adding a new transaction by clicking on the “Add a
 
 •	Date of transaction
 •	Type of transaction
-o	Income
-o	Expense
+o	   Income
+o	   Expense
 •	Amount of the transaction
 •	A description of the transaction, although it is not necessary.
 
@@ -73,33 +70,33 @@ The two filters:
 
 1.	Select Report Type (Balance, Income, Expense)
 
-o	Balance – Calculates total balance based on the target period.
+o	    Balance – Calculates total balance based on the target period.
 
-o	Income only – Provide you with acquired income based on the target period.
+o	    Income only – Provide you with acquired income based on the target period.
 
-o	Expense only – Provide you with the total you spend based on the target period.
+o	    Expense only – Provide you with the total you spend based on the target period.
 
 2.	Select Period:
 
-o	Last 1 Week
-o	Last one month
-o	Last one year
+o	  Last 1 Week
+o	  Last one month
+o	  Last one year
 o	Or you can customize it (viva to ANTD)
 
 An analytical report appears on the right side of the screen, above the table, that shows information based on selected criteria from the above filters.
 
 Communication Diagram
-
+(Image in PDF Document)
  
 Wireframes
 Login page
-
- 
+ (Image in PDF Document)
 
 Registration page
+(Image in PDF Document)
  
-
 Home Page
+(Image in PDF Document)
  
 The Code
 The following is the general structure of this expense tracking app. There are two parts involved (also including database):
@@ -122,16 +119,17 @@ I have used VS Code for the coding.
 
 Front End
 The following shows the structure of the front-end part of this app.
-
- 
+(Image in PDF Document)
 
 I have used followings as dependency an installed them using “npm i” command in the VS Code console.  To run Front End only, in console, “cd client”, to make sure you are in the client folder.  Then run “npm start” command.
+(Image in PDF Document)
  
 Back End
 Back-End part has the following structure:
+(Image in PDF Document)
  
 I have used followings as dependency an installed them using npm i command from VS Code console:
- 
+(Image in PDF Document) 
 
 To run Back End only, in console, “cd ..” to come out of client folder if you were in it following above instruction, and make sure you are in the root folder of project.  Then run “nodemon server” command.
 
