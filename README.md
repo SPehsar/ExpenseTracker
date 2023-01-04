@@ -1,6 +1,7 @@
  
 Prologue
-The PDF version of this file located at: 
+The PDF version of this file located at:
+ https://github.com/SPehsar/ExpenseTracker/blob/master/README.pdf
 You can access the application using the following link:
 
 Contents
@@ -14,17 +15,21 @@ The Code	5
 The technology is being used	5
 Front End	6
 Back End	7
-Need to Know	8
-Moment.js	8
-Ant Design	8
+How I Created the Structure	8
+Back end:	8
+Front end:	8
+Final Note	9
+Need to Know	9
+Moment.js	9
+Ant Design	9
 Features	9
 Redux	9
-Axios	9
-Axios vs. Fetch	9
-CORS	9
+Axios	10
+Axios vs. Fetch	10
+CORS	10
 Concurrently	10
 Morgan	10
-Happy coding!	10
+Happy coding!	11
 
 
  
@@ -115,6 +120,30 @@ To run Back End only, in console, “cd ..” to come out of client folder if yo
 
 To run application concurrently from the VS Code console, make sure you are in the root folder of project, Then run “npm run dev” command.
 
+
+How I Created the Structure
+In VS Code, from command console:
+
+Back end:
+Create all the needed back-end folders and files 
+Go to console and type: npm init -y
+(it creates package.json)
+
+Then install all dependencies for back end using npm i
+
+Make sure to create .env and .gitignore files.
+Include /node_modules in .gitignore file to prevent uploading those large files/folders to github.
+
+Front end:
+npm  create-react-app  client
+cd client
+Then install all dependencies for front end using npm i
+Create all the needed folders and files and make sure you have .gitignore file.
+Include .env and /node_modules in .gitignore file to prevent password uploaded to github.
+
+You may go ahead and clean up some folders and files in front end part.  They are created by default and if you don’t use them remove them
+
+Final Note
 The code was created based on the knowledge acquired during cohort class, special the full stack MERN app that we worked on.  In addition, shout-out to al youtubers and other coders that provide very detailed educational instructions.  You all rock with no exception. Besides that, If you like the code, please give me a star.
 
 I, definitely, suggest that you explore “antd” (see below for more information).  They are resourceful in all aspects.
