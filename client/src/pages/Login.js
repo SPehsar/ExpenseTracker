@@ -48,7 +48,7 @@ const Login = () => {
               fontSize: "50px",
               backgroundSize: "cover",
             }}
-            className="resgister-page"
+            className="loginAndRegister"
           >
             <Form
               layout="vertical"
@@ -107,7 +107,7 @@ const Login = () => {
                     &nbsp;&nbsp;&nbsp;&nbsp;regsiter
                   </h9>
                 </Link>
-                <button className="btn btn-warning">
+                <button className="btn">
                   <h5>Login</h5>
                 </button>
               </div>

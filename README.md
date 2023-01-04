@@ -1,30 +1,36 @@
  
+Prologue
+The PDF version of this file located at: 
+You can access the application using the following link:
 
 Contents
+Prologue	1
 Summary	3
 How It Works	3
 Authentication	3
 When you are in the app	3
-The Code	4
-The technology is being used	4
-Front End	5
-Back End	6
-Need to Know	7
-Moment.js	7
-Ant Design	7
-Features	7
-Redux	8
-Axios	8
-Axios vs. Fetch	8
-CORS	8
-Concurrently	8
-Morgan	9
-Happy coding!	9
+Communication Diagram	4
+The Code	5
+The technology is being used	5
+Front End	6
+Back End	7
+Need to Know	8
+Moment.js	8
+Ant Design	8
+Features	9
+Redux	9
+Axios	9
+Axios vs. Fetch	9
+CORS	9
+Concurrently	10
+Morgan	10
+Happy coding!	10
 
 
  
 Summary
-Expense tracker app is an online app that allows you to log your expenditure and categorize your expenses to figure out the amount you spent or gained. It can provide information for certain periods and provide you with the net balance, as we all expect.  The results appear in a tabular form accordingly.
+Expense tracker app is an online app that allows you to log your expenditure and categorize your expenses to figure out the amount you spent or gained. It can provide information for certain periods and provide you with the net balance, as we all expect.  The results appear in a tabular form accordingly. You can access the application using the following link:
+
 How It Works
 This app is a very simple version of budgeting, and it will provide users with a general view of incoming and outgoing money. 
 
@@ -69,6 +75,10 @@ o	Or you can customize it (viva to ANTD)
 
 An analytical report appears on the right side of the screen, above the table, that shows information based on selected criteria from the above filters.
 
+Communication Diagram
+
+ 
+
 The Code
 The following is the general structure of this expense tracking app. There are two parts involved (also including database):
 
@@ -93,13 +103,17 @@ The following shows the structure of the front-end part of this app.
 
  
 
-I have used followings as dependency an installed them using npm i command in the VS Code console
+I have used followings as dependency an installed them using “npm i” command in the VS Code console.  To run Front End only, in console, “cd client”, to make sure you are in the client folder.  Then run “npm start” command.
  
 Back End
 Back-End part has the following structure:
  
 I have used followings as dependency an installed them using npm i command from VS Code console:
  
+
+To run Back End only, in console, “cd ..” to come out of client folder if you were in it following above instruction, and make sure you are in the root folder of project.  Then run “nodemon server” command.
+
+To run application concurrently from the VS Code console, make sure you are in the root folder of project, Then run “npm run dev” command.
 
 The code was created based on the knowledge acquired during cohort class, special the full stack MERN app that we worked on.  In addition, shout-out to al youtubers and other coders that provide very detailed educational instructions.  You all rock with no exception. Besides that, If you like the code, please give me a star.
 
@@ -149,7 +163,7 @@ Concurrency means that a program is able to run more than one task at a time (on
 
 Morgan 
 Morgan is an HTTP request level Middleware. It is a great tool that logs the requests along with some other information depending upon its configuration and the preset used. It proves to be very helpful while debugging and also if you want to create Log files. Prerequisites: Basic understanding of Nodejs.
-
+ 
 Happy coding!
 
- 
+

@@ -27,8 +27,8 @@ const Header = () => {
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-light">
-        <div className="hContainer">
+      <nav className="headerTopBar">
+          <div className="hContainer">
           <div className="hItemTwo">
               <h1 className="headerFont">Expense Tracker</h1>
           </div>
@@ -39,7 +39,7 @@ const Header = () => {
               
               <button className="dropbtn">
                 {" "}
-                <p>{loginUser && loginUser.name} logged in</p>{" "}
+                <p style={{fontSize:"large"}}>{loginUser && loginUser.name} logged in</p>{" "}
               </button>
 
               <div className="dropdown-content">

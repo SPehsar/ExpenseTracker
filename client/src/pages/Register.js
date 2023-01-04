@@ -39,7 +39,7 @@ const Register = () => {
   return (
     <>
       <div style={{ backgroundImage: `url(${background})`, backgroundRepeat: 'no-repeat', height:'100vh',
-      marginTop:'-70px', fontSize:'50px', backgroundSize: 'cover', }}   className="resgister-page">
+      marginTop:'-70px', fontSize:'50px', backgroundSize: 'cover', }}   className="loginAndRegister">
         
         <Form layout="vertical" className="modal-content animate" onFinish={submitHandler}>
           <h1>Register Form</h1>
@@ -58,7 +58,7 @@ const Register = () => {
           
           <div className="d-flex justify-content-between">
             <Link to="/login"><h9>Already Registered - Click &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Here to login</h9></Link>
-            <button className="btn btn-warning">Register</button>
+            <button className="btn">Register</button>
           </div>
         
         </Form>

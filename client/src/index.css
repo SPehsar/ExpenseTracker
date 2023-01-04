@@ -35,7 +35,6 @@ table, Table {
   border: 3px solid rgb(9, 243, 185);
 }
 
-
 td, th{
   border: 1px solid #dddddd;
   padding: 8px;
@@ -55,11 +54,17 @@ th{
   text-align: center;
 }
 
-.resgister-page {
+.headerTopBar{
+  background-color: #F0F0F0;
+  height: max-content; /* proper to test height */
+  font-size:3ex;
+}
+
+.loginAndRegister {
   display: flex; 
+  height: 100vh; /* Full height */
   align-items: center;
   justify-content: center; 
-  height: 90vh;
   background-color: rgb(235, 235, 240);
 }
 
@@ -81,13 +86,6 @@ th{
 .headerFont{
   font-family: 'Poppins', sans-serif;
   font-weight: bold
-}
-
-.filters {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 15px 20px;
 }
 
 .anticon svg {
@@ -116,6 +114,7 @@ tr:nth-child(even) {
   padding-top: 20px;
   padding-right: 20px;
 }
+
 .hItemTwo {
   float: left;
   padding-top: 20px;
@@ -136,7 +135,7 @@ tr:nth-child(even) {
   display: none;
   position: absolute;
   padding: 12px 16px;
-  background-color: #F8F9FA;
+  background-color: #F0F0F0;
   min-width: 160px;
   text-decoration: none;
   z-index: 1;
@@ -209,6 +208,7 @@ button:hover {
 label, label { 
   font-size:36px;
 }
+
  .ant-form-item-label>label {
   font-size: 16px;
 }
@@ -240,14 +240,16 @@ label, label {
 
 /* Set a style for the submit button */
 .btn {
-  background-color: --orange;
-  color: --white;
+  background-color: #FFC720;
+  color: black;
   padding: 15px 20px;
+  font-size:large;
   border: none;
   cursor: pointer;
   width: 100%;
   opacity: 0.9;
 }
+
 .btn:hover {
   background-color: pink;
   padding: 15px 20px;
@@ -257,6 +259,12 @@ label, label {
   opacity: 0.8;
 }
 
+.calculationFilterSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+}
 
 h9{
   font-size: 16px; 
@@ -281,6 +289,7 @@ h9:hover {
   height: 5px;
   padding: 4px;
 }
+
 .ant-table-thead > tr > th {
   height: 5px;
   padding: 4px;
@@ -295,7 +304,6 @@ h9:hover {
   border-collapse:collapse;
   background: transparent;
   outline: 0;
- 
 }
 
 .alnright { 

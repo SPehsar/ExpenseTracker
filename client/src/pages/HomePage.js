@@ -191,10 +191,10 @@ const HomePage = () => {
   return (
     <Layout>
       <Divider />
-      <div className="filters">
+      <div className="calculationFilterSection">
         <div>
           <button
-            className="btn btn-warning"
+            className="btn"
             onClick={() => {
               setShowModal(true);
               setOpen1(false);
@@ -370,13 +370,13 @@ const HomePage = () => {
 
           <div className="d-flex justify-content-center">
             <Space>
-              <button type="submit" className="btn btn-warning ">
+              <button type="submit" className="btn ">
                 {" "}
                 Submit
               </button>
 
               <Form name="theForm" onSubmit="return checkForm(event)">
-                <button type="submit" className="btn btn-warning ">
+                <button type="submit" className="btn">
                   {" "}
                   Cancel
                 </button>
