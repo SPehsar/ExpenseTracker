@@ -7,7 +7,9 @@
     "start": "node server.js",
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\" "
+    "dev": "concurrently \"npm run server\" \"npm run client\" ",
+    "prod-build": "cd client && npm i && npm run build",
+    "prod-bstart": "node server.js"
   },
   "keywords": [],
   "author": "Cyla",
