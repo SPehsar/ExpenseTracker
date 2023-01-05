@@ -2,8 +2,11 @@
 Prologue
 The PDF version of this file located at:
  https://github.com/SPehsar/ExpenseTracker/blob/master/README.pdf
-You can access the application using the following link:
-https://expense-tracker-qa5s.onrender.com
+
+You can access to see the demo of home page by using the following link:
+https://expense-tracker-30.onrender.com
+
+It is an anonymous user with no right only to view the page, but with no right.  If you are interested, to take the benefit of the App functionality, you need to logout of the anonymous user and register and sign back to use the App functionality in full. I hope you like it.
 
 
 Contents
