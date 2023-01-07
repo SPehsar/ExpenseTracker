@@ -209,13 +209,28 @@ label, label {
   font-size:36px;
 }
 
+/* ant related elements */
  .ant-form-item-label>label {
   font-size: 16px;
 }
 
+.ant-table {
+  font-size: 20px;
+}
+
+/* row data */
+.ant-table-tbody > tr > td {
+  height: 5px;
+  padding: 4px;
+}
+
+.ant-table-thead > tr > th {
+  height: 5px;
+  padding: 4px;
+}
+
 .input-container {
   display: flex;
-  /* width: 100%; */
   margin-bottom: 15px;
 }
 
@@ -280,20 +295,6 @@ h9:hover {
   cursor: pointer;
 }
 
-.ant-table {
-  font-size: 20px;
-}
-
-/* row data */
-.ant-table-tbody > tr > td {
-  height: 5px;
-  padding: 4px;
-}
-
-.ant-table-thead > tr > th {
-  height: 5px;
-  padding: 4px;
-}
 
 .pivoteTable2 {
   width: 100%;

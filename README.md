@@ -32,7 +32,7 @@ https://expense-tracker-30.onrender.com
 ###How I Created the Structure	
 ##Back end:	
 ##Front end:	
-###Final Note	
+###Final Note: Credits and References	
 ###Need to Know	
 ##Moment.js	
 ##Features	
@@ -167,9 +167,8 @@ Include .env and /node_modules in .gitignore file to prevent password uploaded t
 You may go ahead and clean up some folders and files in front end part.  They are created by default and if you don’t use them remove them
 
 
-
-###Final Note
-The code was created based on the knowledge acquired during cohort class, special the full stack MERN app that we worked on.  In addition, shout-out to al youtubers and other coders that provide very detailed educational instructions.  You all rock with no exception. Besides that, If you like the code, please give me a star.
+###Final Note: Credits and references
+The code was created based on the knowledge acquired during cohort class, special the full stack MERN app that we worked on.  In no situation I take the ownership of the codes; since there are many foot-soldiers that make all these codes and let people learn from. It belongs to the developers’ community.  That is, shout-out to all the youtubers and other coders that provide very detailed educational instructions.  You all rock with no exception. Besides that, if you like the code and any effort, I put on this, please give me a star.
 
 I, definitely, suggest that you explore “antd” (see below for more information).  They are resourceful in all aspects.
 

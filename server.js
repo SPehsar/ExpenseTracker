@@ -27,10 +27,11 @@ app.use("/api/v1/users", require("./routes/userRoute"));
 app.use("/api/v1/transactions", require("./routes/transactionRoutes"));
 // ----------------------------------------------------
 
-
+// --------------------------- Pre build for Production
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/build'));
 }
+// ----------------------------------------------------
 
 // ---------------------------------------------- build 
 app.get("/*", (req, res) => {

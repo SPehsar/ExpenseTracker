@@ -5,14 +5,14 @@ import { Link, useNavigate } from "react-router-dom";
 
 const Header = () => {
 
-  const [loginUser, setLoginUser] = useState("");
+  const [loggedinUser, setLoggedinUser] = useState("");
 
   const navigate = useNavigate();
 
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem("user"));
     if (user) {
-      setLoginUser(user);
+      setLoggedinUser(user);
     }
   }, []);
 
@@ -39,7 +39,7 @@ const Header = () => {
               
               <button className="dropbtn">
                 {" "}
-                <p style={{fontSize:"large"}}>{loginUser && loginUser.name} logged in</p>{" "}
+                <p style={{fontSize:"large"}}>{loggedinUser && loggedinUser.name} logged in</p>{" "}
               </button>
 
               <div className="dropdown-content">

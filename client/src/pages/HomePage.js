@@ -41,13 +41,14 @@ const HomePage = () => {
   // ----------------------------------------------------------------------------------------
 
   // useState section------------------------------------------------------------------------
-  const [type, setType] = useState("all");
   const [open, setOpen1] = useState(false);
+  const [period, setPeriod] = useState("7");
   const [editable, setEditable] = useState(null);
-  const [frequency, setFrequency] = useState("7");
-  const [showModal, setShowModal] = useState(false);
-  const [selectedDate, setSelectedate] = useState([]);
+  const [reportType, setReportType] = useState("all");
+  const [showAntdModal, setShowAntdModal] = useState(false);
   const [allTransaction, setAllTransaction] = useState([]);
+  const [selectedDate, setSelectedate] = useState([]);
+
   // -----------------------------------------------------------------------------------------
 
   // Get Data based on filters and perform calculations --------------------------------------
@@ -74,6 +75,7 @@ const HomePage = () => {
   // -----------------------------------------------------------------------------------------
 
   // Creating table of data ------------------------------------------------------------------
+  const type = reportType;
   const columns = [
     {
       title: "Date:",
@@ -105,7 +107,7 @@ const HomePage = () => {
               style={{ color: "blue", fontSize: "22px" }}
               onClick={() => {
                 setEditable(record);
-                setShowModal(true);
+                setShowAntdModal(true);
               }}
             />
             <DeleteOutlined
@@ -121,10 +123,11 @@ const HomePage = () => {
   ];
   // -----------------------------------------------------------------------------------------
 
-  // useEffects ---Select Frequency, selectedDate, Selectype] ---------------------------------
-  // Select Frequency (1 week, 1 month, one year, custome),
+  // useEffects ---Select period, selectedDate, Selectype] ---------------------------------
+  // Select period (1 week, 1 month, one year, custome),
   // selectedDate,
   // Select Type (Income or expense)]
+  const frequency = period;
   useEffect(() => {
     const getAllTransactions = async () => {
       try {
@@ -179,7 +182,7 @@ const HomePage = () => {
         });
         message.success("Transaction Added Successfully");
       }
-      setShowModal(false);
+      setShowAntdModal(false);
       setEditable(null);
     } catch (info) {
       message.info("Complete the form or Click on X to Cancel");
@@ -196,7 +199,7 @@ const HomePage = () => {
           <button
             className="btn"
             onClick={() => {
-              setShowModal(true);
+              setShowAntdModal(true);
               setOpen1(false);
             }}
           >
@@ -211,7 +214,7 @@ const HomePage = () => {
           <Select
             style={{ padding: "0 8px 4px" }}
             value={type}
-            onChange={(values) => setType(values)}
+            onChange={(values) => setReportType(values)}
           >
             <Select.Option value="all">Balance</Select.Option>
             <Select.Option value="income">Income only</Select.Option>
@@ -229,7 +232,7 @@ const HomePage = () => {
 
         <div>
           <h6>Select Period</h6>
-          <Select style={{ padding: "0 8px 4px" }} value={frequency} onChange={(values) => setFrequency(values)}>
+          <Select style={{ padding: "0 8px 4px" }} value={frequency} onChange={(values) => setPeriod(values)}>
             <Select.Option value="7">LAST 1 Week</Select.Option>
             <Select.Option value="30">LAST 1 Month</Select.Option>
             <Select.Option value="365">LAST 1 year</Select.Option>
@@ -335,8 +338,8 @@ const HomePage = () => {
       <Modal
         destroyOnClose={true}
         title={editable ? "Edit Transaction" : "Add Transaction"}
-        open={showModal}
-        footer={false}
+        open={showAntdModal}
+        footer={true}
       >
         <Form
           layout="vertical"

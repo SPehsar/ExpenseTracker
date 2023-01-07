@@ -1,27 +1,26 @@
 import axios from "axios";
-import { Form, Input, message } from "antd";
 import React, { useEffect } from "react";
+import { Form, Input, message } from "antd";
 import { Link, useNavigate } from "react-router-dom";
 import background from "./images/Expense_Tracker.png";
 import { RedEnvelopeOutlined, KeyOutlined } from "@ant-design/icons";
 
 const Login = () => {
-  // const [loading, setLoading] = useState(false);
-  const navigate = useNavigate();
+    const navigate = useNavigate();
 
   // login submit handler ------------------------------------------------
   const submitHandler = async (values) => {
     try {
       const { data } = await axios.post("/api/v1/users/login", values);
 
-      message.success("login success");
+      message.success("Successfully Logged in");
       localStorage.setItem(
         "user",
         JSON.stringify({ ...data.user, password: "" })
       );
       navigate("/");
     } catch (error) {
-      message.info("Pease compete all the fields correctly!!!");
+      message.info("Please complete all the fields correctly!!!");
     }
   };
   // -------------------------------------------------------------------------
