@@ -24,6 +24,16 @@ const Header = () => {
     navigate("/login");
   };
 // log out steps--------------------------------------------
+function printData()
+{
+   var divToPrint=document.getElementById("printTable");
+   let newWin= window.open("");
+   newWin.document.write(divToPrint.outerHTML);
+   newWin.print();
+   newWin.close();
+}
+
+
 
   return (
     <>

@@ -1,10 +1,17 @@
 import "../index.css";
 import axios from "axios";
 import moment from "moment";
-import Layout from "../components/Layout/Layout";
+import { Component } from "react";
+import ReactToPrint from "react-to-print";
+import { Layout } from "antd";
+import PageLayout from "../components/Layout/Layout";
 import React, { useState, useEffect } from "react";
 import { numberWithCommas } from "../utils/format";
-import { EditOutlined, DeleteOutlined } from "@ant-design/icons";
+import {
+  EditOutlined,
+  DeleteOutlined,
+  PrinterTwoTone,
+} from "@ant-design/icons";
 import {
   Form,
   Input,
@@ -17,6 +24,7 @@ import {
   Divider,
 } from "antd";
 
+const { Content } = Layout;
 const { TextArea } = Input;
 const { RangePicker } = DatePicker;
 
@@ -67,7 +75,7 @@ const HomePage = () => {
   const remainder = (totalIncomeBalance - totalExpenseBalance).toFixed(2);
   // -----------------------------------------------------------------------------------------
 
-  // Cancel Button Handler ------------------------------------------------------------------
+  // Cancel Button Handler -------------------------------------------------------------------
   function checkForm(e) {
     if (!window.confirm("Do you want to submit the form?"))
       e.returnValue = false;
@@ -191,8 +199,26 @@ const HomePage = () => {
   };
   // End of handling transaction form--------------------------------------------------------
 
+  // handling printing tables ------------------------------------------------------------
+  function printTable(value) {
+    if( value === "printPivotTable"){
+      let divToPrint = document.getElementById("printPivotTable");
+      let newWin = window.open("");
+      newWin.document.write(divToPrint.outerHTML);
+      newWin.print();
+      newWin.close();
+    } else{
+      let divToPrint = document.getElementById("printTable");
+      let newWin = window.open("");
+      newWin.document.write(divToPrint.outerHTML);
+      newWin.print();
+      newWin.close();
+    }
+  }
+  // End of handling table Prints --------------------------------------------------------------
+  
   return (
-    <Layout>
+    <PageLayout>
       <Divider />
       <div className="calculationFilterSection">
         <div>
@@ -232,7 +258,11 @@ const HomePage = () => {
 
         <div>
           <h6>Select Period</h6>
-          <Select style={{ padding: "0 8px 4px" }} value={frequency} onChange={(values) => setPeriod(values)}>
+          <Select
+            style={{ padding: "0 8px 4px" }}
+            value={frequency}
+            onChange={(values) => setPeriod(values)}
+          >
             <Select.Option value="7">LAST 1 Week</Select.Option>
             <Select.Option value="30">LAST 1 Month</Select.Option>
             <Select.Option value="365">LAST 1 year</Select.Option>
@@ -245,13 +275,30 @@ const HomePage = () => {
             />
           )}
         </div>
+        
+        <Divider type="vertical" />
+      
+        <div>
+          <h6>Print Table</h6>
+          <Select
+            style={{ padding: "0 8px 4px" }}
+            value="Select Print Section"   onChange={(values) => printTable(values)}>
+            <Select.Option value="printDataTable">Main Table</Select.Option>
+            <Select.Option value="printPivotTable">Analytical Table</Select.Option>
+          </Select>
+        </div>
 
         <Divider type="vertical" />
 
         <div>
           {" "}
           <>
-            <table className="pivoteTable2" cellspacing="0" cellpadding="0">
+            <table
+              className="pivoteTable2"
+              id="printPivotTable"
+              cellspacing="0"
+              cellpadding="0"
+            >
               <tbody>
                 {/* -------------- Income --------------- */}
 
@@ -332,7 +379,7 @@ const HomePage = () => {
       <Divider />
 
       <div className="content">
-        <Table columns={columns} dataSource={allTransaction} />
+        <Table columns={columns} id="printTable" dataSource={allTransaction} />
       </div>
 
       <Modal
@@ -346,7 +393,6 @@ const HomePage = () => {
           onFinish={handleSubmit}
           initialValues={editable}
         >
-
           <Form.Item label="type" name="type">
             <Select>
               <Select.Option value="income">Income</Select.Option>
@@ -389,7 +435,7 @@ const HomePage = () => {
         </Form>
         <Form preserve={false}></Form>
       </Modal>
-    </Layout>
+    </PageLayout>
   );
 };
 
