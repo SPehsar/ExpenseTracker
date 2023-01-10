@@ -2,6 +2,7 @@ const cors = require("cors");
 const morgan = require("morgan");
 const dotenv = require("dotenv");
 const express = require("express");
+const path= require("path");
 
 const databaseConnection = require("./config/databaseConnection");
 
@@ -33,6 +34,9 @@ if (process.env.NODE_ENV === 'production') {
 }
 // ----------------------------------------------------
 
+
+// The following "catch all" route (note the *) is necessary
+// to return the index.html on all non-AJAX requests
 // ---------------------------------------------- build 
 app.get("/*", (req, res) => {
   res.sendFile(path.join(__dirname, "client/build", "index.html"))

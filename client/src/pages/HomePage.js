@@ -203,7 +203,7 @@ const HomePage = () => {
   function printTable(value) {
     if( value === "printPivotTable"){
       let divToPrint = document.getElementById("printPivotTable");
-      let newWin = window.open("");
+      let newWin = window.open('', '', 'height=700,width=700');
       newWin.document.write(divToPrint.outerHTML);
       newWin.print();
       newWin.close();
@@ -293,7 +293,7 @@ const HomePage = () => {
         <div>
           {" "}
           <>
-            <table
+            <table style={{ padding: "0 8px 4px", width:"805px" }}
               className="pivoteTable2"
               id="printPivotTable"
               cellspacing="0"
@@ -377,9 +377,9 @@ const HomePage = () => {
         </div>
       </div>
       <Divider />
-
+        
       <div className="content">
-        <Table columns={columns} id="printTable" dataSource={allTransaction} />
+        <Table style={{ padding: "0 8px 4px", width:"2005px" }} columns={columns} id="printTable" dataSource={allTransaction} />
       </div>
 
       <Modal

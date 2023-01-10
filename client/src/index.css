@@ -373,3 +373,11 @@ a {
        counter-increment: section;
        content: counters(section, ".") " ";
    }    */
+
+   /* @media print {
+    * { color: black; background: white; }
+    table { font-size: 80%; border-collapse:collapse; border: 1px solid black; width:100%; text-align:right;}
+
+ } */
+
+ 
